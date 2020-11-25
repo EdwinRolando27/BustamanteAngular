@@ -1,0 +1,49 @@
+<div class="body">
+    <div class="botones">
+        <button (click)='showDatos()' type="button" class="btn btn-dark">
+    {{estado ? 'Ocultar Paises': 'Pais'}}
+</button>
+        <table *ngIf='estado' class="table table-sm">
+
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Capital</th>
+                    <th scope="col">Area</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dato of datos">
+
+                    <td>{{dato.name}}</td>
+                    <td>{{dato.region}}</td>
+                    <td>{{dato.subregion}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <button (click)='showDatos()' type="button" class="btn btn-dark">
+    {{estado ? 'Ocultar Peru': 'Perú'}}
+</button>
+        <table *ngIf='estado' class="table table-sm">
+
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Capital</th>
+                    <th scope="col">Area</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dato of datos">
+
+                    <td>{{dato.name}}</td>
+                    <td>{{dato.region}}</td>
+                    <td>{{dato.subregion}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

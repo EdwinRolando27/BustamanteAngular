@@ -1,0 +1,23 @@
+<br>
+<button (click)='showDatos()' type="button" class="btn btn-dark">
+    {{estado ? 'Ocultar Post': 'Ver Post del servicio'}}
+</button>
+<table *ngIf='estado' class="table table-sm">
+
+    <thead>
+        <tr>
+            <th scope="col">Codigo</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Contenido</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dato of datos">
+
+            <td>{{dato.id}}</td>
+            <td>{{dato.title}}</td>
+            <td>{{dato.body}}</td>
+        </tr>
+
+    </tbody>
+</table>

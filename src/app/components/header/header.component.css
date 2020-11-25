@@ -1,0 +1,11 @@
+.padre {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    height: 400px;
+    width: 70%;
+    margin: 4%;
+}
